@@ -1,0 +1,30 @@
+from array import*
+s1=input("enter string")
+v=array('ch',[])
+acount=0
+scount=0
+vcount=0
+ccount=0
+
+for val in s1:
+    if val.isalpha()==True:
+        acount+=1
+        if val=='a' or val=='e' or val=='i' or val=='o' or val=='u' or val=='A' or val=='E' or val=='I' or val=='O' or val=='U':
+            vcount+=1
+        else:
+            ccount+=1
+        
+        
+    elif val==' ':
+        scount+=1
+    else:
+        print("invalid only space and alphabet are allowed")
+print("number of alphabet are",acount,"number of spaces are",scount)
+print("number of vowel are",vcount,"number of consonent are are",ccount)
+for val in s1:
+    for i in len(s1):
+        if val.isalpha()==True and v.count(val)==0:
+           print(val,"=",s1.count(val))
+           v[i]=val
+        
+print(v)
