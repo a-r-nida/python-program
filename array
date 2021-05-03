@@ -1,0 +1,20 @@
+#program to check percentages of students pass and fail in a class
+from array import*
+fsum=0
+psum=0
+a=array('f',[])
+size=int(input("enter number of students"))
+print("enter",size,"student's marks")
+for r in range (size):
+    a.append(float(input()))
+
+for val in a:
+  if val<40:
+      fsum+=1
+  else:
+      psum+=1
+print("number of passed stu",psum)
+print("number of fail stu",fsum)
+print("percent of student pass",(psum/size)*100,"%")
+print("percent of student failed",(fsum/size)*100,"%")
+
